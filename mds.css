@@ -22,13 +22,9 @@
   font-size: 1.6rem;
   background-color: #EEEEEE;
   border: 0;
-  /* border-bottom: 2px solid #9E9E9E; */
   border-radius: 5px 5px 0 0;
   box-sizing: border-box;
   transition: border-bottom 0.2s linear;
-}
-.mds-text-field__input:focus{
-  /* border-bottom: 2px solid #6200ee; */
 }
 .mds-text-field__label{
   position: absolute;
@@ -52,6 +48,7 @@
   bottom: 0;
   transform: scaleX(0);
   transition: transform 0.2s linear, background-color, 0.2s linear;
+  z-index: 1;
 }
 .mds-text-field__input:focus ~ .mds-text-field__border{
   background-color: #6200ee;
@@ -137,25 +134,22 @@
   content: "";
   position: absolute;
   opacity: 0.01;
-  transition: opacity 0.2s linear;
-}
-.mds-checkbox__input:checked ~ .mds-checkbox__checkmark::after{
-  opacity: 1;
-}
-.mds-checkbox__checkmark::after{
-  left: 6px;
   top: 2px;
+  left: 6px;
   width: 5px;
   height: 10px;
   border: solid #ffffff;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
+  transition: opacity 0.2s linear;
+}
+.mds-checkbox__input:checked ~ .mds-checkbox__checkmark::after{
+  opacity: 1;
 }
 .mds-checkbox__input:checked ~ .mds-checkbox__checkmark--checked{
   border: 2px solid #6200eeff;
   background-color: #6200eeff;
 }
-
 /* --- Radio button --- */
 .mds-radio-btn{
   position: relative;
