@@ -1,4 +1,5 @@
-let inputFields = document.querySelectorAll('.form__mds-text-field__input');
+let inputFields = document.querySelectorAll('.mds-text-field__input');
+let switches = document.querySelectorAll('.mds-switch');
 
 let mds = {
   textField: function(e){
@@ -14,7 +15,19 @@ let mds = {
       label.style.transition = 'all 0.2s';
     }
   },
-  switch: function(){
+  switch: function(e){
+    let track = e.target.childNodes[1];
+    let thumb = track.childNodes[1];
+    if(e.target.dataset.switch === 'disabled'){
+      track.classList.add('mds-switch__track--active');
+      thumb.classList.add('mds-switch__thumb--active');
+      e.target.dataset.switch = 'active';
+    }
+    else{
+      track.classList.remove('mds-switch__track--active');
+      thumb.classList.remove('mds-switch__thumb--active');
+      e.target.dataset.switch = 'disabled';
+    }
 
   },
   checkbox: function(){
@@ -30,4 +43,7 @@ for(let input of inputFields){
 }
 for(let input of inputFields){
   input.addEventListener('blur', mds.textField);
+}
+for(let x of switches){
+  x.addEventListener('click', mds.switch);
 }

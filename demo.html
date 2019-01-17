@@ -11,14 +11,38 @@
   <body>
     <section>
       <form class="form" action="index.html" method="post">
-        <div class="form__mds-text-field">
-          <input class="form__mds-text-field__input" type="text" name="" value="">
-          <label class="form__mds-text-field__label" for="">Title</label>
+        <!-- Text field -->
+        <div class="mds-text-field">
+          <input class="mds-text-field__input" type="text" name="" value="">
+          <label class="mds-text-field__label" for="">Title</label>
         </div>
-        <div class="form__mds-text-field">
-          <input class="form__mds-text-field__input" type="text" name="" value="">
-          <label class="form__mds-text-field__label" for="">Name</label>
+        <!-- Switch -->
+        <div class="mds-switch" data-switch="disabled">
+          <div class="mds-switch__track">
+            <div class="mds-switch__thumb">
+            </div>
+          </div>
         </div>
+        <!-- Checkbox -->
+        <div class="mds-checkbox">
+          <input class="mds-checkbox__input" type="checkbox" name="" value="">
+          <span class="mds-checkbox__checkmark"></span>
+          Text
+        </div>
+        <label class="mds-radio-btn" for="">
+          <input class="mds-radio-btn__input" type="radio" name="radiobtn" value="">
+          <span class="mds-radio-btn__checkmark">
+            <span class="mds-radio-btn__checkmark__inner-circle"></span>
+          </span>
+          Text 1
+        </label>
+        <label class="mds-radio-btn" for="">
+          <input class="mds-radio-btn__input" type="radio" name="radiobtn" value="">
+          <span class="mds-radio-btn__checkmark">
+            <span class="mds-radio-btn__checkmark__inner-circle"></span>
+          </span>
+          Text 2
+        </label>
       </form>
     </section>
   </body>
