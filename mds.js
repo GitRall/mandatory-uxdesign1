@@ -4,15 +4,18 @@ let switches = document.querySelectorAll('.mds-switch');
 let mds = {
   textField: function(e){
     let label = e.target.parentNode.childNodes[3];
+    let border = e.target.parentNode.childNodes[5];
     if(e.type === 'focus' || e.target.value.length > 0){
       label.style.top = '16px';
       label.style.fontSize = '1.2rem';
       label.style.transition = 'all 0.2s';
+      border.style.transform = 'scaleX(1)';
     }
     else{
       label.style.top = '50%';
       label.style.fontSize = '2rem';
       label.style.transition = 'all 0.2s';
+      border.style.transform = 'scaleX(0)';
     }
   },
   switch: function(e){
