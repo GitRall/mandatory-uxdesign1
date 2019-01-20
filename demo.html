@@ -16,10 +16,12 @@
           <input class="mds-text-field__input" type="text" name="" value="">
           <label class="mds-text-field__label" for="">Title</label>
           <span class="mds-text-field__border"></span>
+          <span class="mds-text-field__error-icon">!</span>
+          <span class="mds-text-field__helper-text">Helper text</span>
         </div>
         <div class="mds-text-field">
-          <input class="mds-text-field__input" type="text" name="" value="">
-          <label class="mds-text-field__label" for="">Test</label>
+          <input class="mds-text-field__input--disabled" type="text" name="" value="" disabled>
+          <label class="mds-text-field__label--disabled" for="">Test</label>
           <span class="mds-text-field__border"></span>
         </div>
         <!-- Switch -->
@@ -29,12 +31,35 @@
             </div>
           </div>
         </div>
+        <div class="mds-switch--disabled" data-switch="disabled">
+          <div class="mds-switch__track">
+            <div class="mds-switch__thumb">
+            </div>
+          </div>
+        </div>
+        <div class="mds-switch--disabled" data-switch="disabled">
+          <div class="mds-switch__track mds-switch__track--active">
+            <div class="mds-switch__thumb mds-switch__thumb--active">
+            </div>
+          </div>
+        </div>
         <!-- Checkbox -->
         <div class="mds-checkbox">
           <input class="mds-checkbox__input" type="checkbox" name="" value="">
           <span class="mds-checkbox__checkmark"></span>
           Text
         </div>
+        <div class="mds-checkbox--disabled">
+          <input class="mds-checkbox__input mds-checkbox__input--disabled" type="checkbox" name="" value="" disabled checked>
+          <span class="mds-checkbox__checkmark"></span>
+          Disabled selected
+        </div>
+        <div class="mds-checkbox--disabled">
+          <input class="mds-checkbox__input mds-checkbox__input--disabled" type="checkbox" name="" value="" disabled>
+          <span class="mds-checkbox__checkmark"></span>
+          Disabled unselected
+        </div>
+        <!-- Radio button -->
         <label class="mds-radio-btn" for="">
           <input class="mds-radio-btn__input" type="radio" name="radiobtn" value="">
           <span class="mds-radio-btn__checkmark">
@@ -48,6 +73,20 @@
             <span class="mds-radio-btn__checkmark__inner-circle"></span>
           </span>
           Text 2
+        </label>
+        <label class="mds-radio-btn-disabled" for="">
+          <input class="mds-radio-btn__input" type="radio" name="disabled-radio" value="" disabled>
+          <span class="mds-radio-btn__checkmark">
+            <span class="mds-radio-btn__checkmark__inner-circle"></span>
+          </span>
+          Disabled unselected
+        </label>
+        <label class="mds-radio-btn-disabled" for="">
+          <input class="mds-radio-btn__input mds-radio-btn__input--disabled" type="radio" name="disabled-radio" value="" disabled checked>
+          <span class="mds-radio-btn__checkmark">
+            <span class="mds-radio-btn__checkmark__inner-circle mds-radio-btn__checkmark__inner-circle--disabled"></span>
+          </span>
+          Disabled selected
         </label>
       </form>
     </section>
