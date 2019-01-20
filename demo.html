@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="mds.css">
-    <script type="text/javascript" src="mds.js" defer></script>
+    <script type="text/javascript" src="mds.js"></script>
   </head>
   <body>
     <section>
@@ -15,6 +15,11 @@
         <div class="mds-text-field">
           <input class="mds-text-field__input" type="text" name="" value="">
           <label class="mds-text-field__label" for="">Title</label>
+          <span class="mds-text-field__border"></span>
+        </div>
+        <div class="mds-text-field">
+          <input class="mds-text-field__input" type="text" name="" value="">
+          <label class="mds-text-field__label" for="">Test</label>
           <span class="mds-text-field__border"></span>
         </div>
         <!-- Switch -->
@@ -46,5 +51,9 @@
         </label>
       </form>
     </section>
+    <script type="text/javascript">
+    mds.textField(document.querySelectorAll('.mds-text-field__input'));
+    mds.switch(document.querySelectorAll('.mds-switch'));
+    </script>
   </body>
 </html>
