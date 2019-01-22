@@ -161,7 +161,7 @@
   background-color: #6200ee89;
 }
 .mds-switch__thumb--active{
-  transform: translate(100%, -50%);
+  transform: translate(80%, -50%);
   background-color: #6200eeff;
 }
 
